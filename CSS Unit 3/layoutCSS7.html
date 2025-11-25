@@ -4,6 +4,173 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Responsive Layout</title>
+<style>
+    body{
+        margin:0;
+        font-family:Arial, sans-serif;
+        background:#2f7d32;
+    }
+
+    .box{
+        background:#b6d7a8;
+        padding:15px;
+        margin:5px;
+        border-radius:4px;
+        font-weight:bold;
+    }
+
+    /* MAIN GRID */
+    .container{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:10px;
+        padding:20px;
+    }
+
+    header, nav, footer, section{
+        grid-column:1 / -1;
+    }
+
+    article{
+        background:#a4d6a0;
+    }
+
+    .article-inner{
+        background:#d9f2d0;
+        padding:10px;
+        margin-top:10px;
+    }
+
+    aside{
+        background:#a4d793;
+    }
+
+    /* ===========================
+       📱 MOBILE LAYOUT (default)
+       =========================== */
+    /* 1-column layout — everything stacked */
+
+    /* ===========================
+       📱📲 TABLET LAYOUT
+       =========================== */
+    @media (min-width: 600px){
+        .container{
+            grid-template-columns:2fr 1fr;
+        }
+        article{
+            grid-column: 1 / 2;
+        }
+        aside{
+            grid-column:2 / 3;
+        }
+    }
+
+    /* ===========================
+       💻 DESKTOP LAYOUT
+       =========================== */
+    @media (min-width: 900px){
+        .container{
+            grid-template-columns:3fr 1fr 1fr;
+        }
+        article{
+            grid-column:1 / 2;
+        }
+        aside:nth-of-type(1){
+            grid-column:2 / 3;
+        }
+        aside:nth-of-type(2){
+            grid-column:3 / 4;
+        }
+        aside:nth-of-type(3){
+            grid-column:2 / 4;
+        }
+    }
+</style>
+</head>
+
+<style>
+    body{
+        margin:0;
+        font-family:Arial, sans-serif;
+        background:#2f7d32;
+    }
+
+    .box{
+        background:#b6d7a8;
+        padding:15px;
+        margin:5px;
+        border-radius:4px;
+        font-weight:bold;
+    }
+
+    /* MAIN GRID */
+    .container{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:10px;
+        padding: 20px;
+    }
+
+    header, nav, footer, section{
+        grid-column:1 / -1;
+    }
+
+    article{
+        background:#a4d6a0;
+    }
+
+    .article-inner{
+        background:#d9f2d0;
+        padding:10px;
+        margin-top:10px;
+    }
+
+    aside{
+        background:#a4d793;
+    }
+
+    /* ===========================
+       📱 MOBILE LAYOUT (default)
+       =========================== */
+    /* 1-column layout — everything stacked */
+
+    /* ===========================
+       📱📲 TABLET LAYOUT
+       =========================== */
+    @media (min-width: 600px){
+        .container{
+            grid-template-columns:2fr 1fr;
+        }
+        article{
+            grid-column:1 / 2;
+        }
+        aside{
+            grid-column:2 / 3;
+        }
+    }
+
+    /* ===========================
+       💻 DESKTOP LAYOUT
+       =========================== */
+    @media (min-width: 900px){
+        .container{
+            grid-template-columns:3fr 1fr 1fr;
+        }
+        article{
+            grid-column:1 / 2;
+        }
+        aside:nth-of-type(1){
+            grid-column:2 / 3;
+        }
+        aside:nth-of-type(2){
+            grid-column:3 / 4;
+        }
+        aside:nth-of-type(3){
+            grid-column:2 / 4;
+        }
+    }
+</style>
+</head>
 
 <style>
     body{
@@ -88,6 +255,54 @@
     }
 </style>
 </head>
+
+<body>
+<div class="container">
+
+    <header class="box">Page Header</header>
+
+    <nav class="box">Nav</nav>
+
+    <article class="box">
+        Article
+        <div class="article-inner">Article Header</div>
+        <div class="article-inner">Main</div>
+    </article>
+
+    <aside class="box">Aside</aside>
+    <aside class="box">Aside</aside>
+    <aside class="box">Aside</aside>
+
+    <section class="box">Section</section>
+
+    <footer class="box">Footer</footer>
+
+</div>
+</body>
+
+<body>
+<div class="container">
+
+    <header class="box">Page Header</header>
+
+    <nav class="box">Nav</nav>
+
+    <article class="box">
+        Article
+        <div class="article-inner">Article Header</div>
+        <div class="article-inner">Main</div>
+    </article>
+
+    <aside class="box">Aside</aside>
+    <aside class="box">Aside</aside>
+    <aside class="box">Aside</aside>
+
+    <section class="box">Section</section>
+
+    <footer class="box">Footer</footer>
+
+</div>
+</body>
 
 <body>
 <div class="container">

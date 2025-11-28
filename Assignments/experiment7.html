@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Navigation Layout</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    border: 2px solid #555;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .header {
+    background: #dcdcdc;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .header span {
+    color: red;
+    font-weight: bold;
+  }
+
+  .nav-section {
+    padding: 20px;
+  }
+
+  .nav-section a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 12px;
+    background: #add8e6;
+    border: 1px solid #888;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .nav-section a.secondary {
+    background: #98fb98;
+  }
+</style>
+</head>
+
+<body>
+<div class="container">
+  <div class="header">My <span>Website</span> Navigation</div>
+  <div class="nav-section">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+    <br><br>
+    <a class="secondary" href="#">Dashboard</a>
+    <a class="secondary" href="#">Profile</a>
+    <a class="secondary" href="#">Messages</a>
+    <a class="secondary" href="#">Logout</a>
+  </div>
+</div>
+</body>
+</html>

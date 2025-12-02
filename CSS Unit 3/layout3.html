@@ -1,117 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Layouts</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link rel="stylesheet" href="style.css">
 <style>
-    body{
-        font-family: Arial, sans-serif;
-        background:#f2f2f2;
-        padding:20px;
+body {
+    margin: 0;
+    background: #2d8642;
+    font-family: Arial, sans-serif;
+}
+
+.box {
+    background: #b6e4a8;
+    padding: 15px;
+    margin: 10px;
+    font-size: 18px;
+}
+
+/* ---------- GRID AREA DEFINITIONS ---------- */
+.container {
+    display: grid;
+    gap: 10px;
+}
+
+/* ---------- MOBILE LAYOUT (left image) ---------- */
+@media (max-width: 700px) {
+    .container {
+        grid-template-areas:
+            "article"
+            "a1"
+            "a2"
+            "a3";
     }
 
-    .container{
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:30px;
+    .article { grid-area: article; }
+    .a1 { grid-area: a1; }
+    .a2 { grid-area: a2; }
+    .a3 { grid-area: a3; }
+}
+
+/* ---------- TABLET LAYOUT (middle image) ---------- */
+@media (min-width: 701px) and (max-width: 1100px) {
+    .container {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "article a1"
+            "article a2"
+            "a3 a3";
     }
 
-    .layout{
-        background:white;
-        padding:15px;
-        border:2px solid #ddd;
+    .article { grid-area: article; }
+    .a1 { grid-area: a1; }
+    .a2 { grid-area: a2; }
+    .a3 { grid-area: a3; }
+}
+
+/* ---------- DESKTOP LAYOUT (right image) ---------- */
+@media (min-width: 1101px) {
+    .container {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-areas:
+            "article a1 a2"
+            "article a3 a3";
     }
 
-    .box{
-        background:#cfe4e8;
-        border:1px solid #999;
-        padding:10px;
-        text-align:center;
-        font-size:14px;
-    }
+    .article { grid-area: article; }
+    .a1 { grid-area: a1; }
+    .a2 { grid-area: a2; }
+    .a3 { grid-area: a3; }
+}
 
-    .flex{ display:flex; gap:10px; }
-    .col{ display:flex; flex-direction:column; gap:10px; }
+/* Styles inside article */
+.article .small {
+    margin-top: 0;
+}
 
-    .grid3{
-        display:grid;
-        grid-template-columns:1fr 1fr 1fr;
-        gap:10px;
-    }
+.main {
+    margin-top: 10px;
+}
 </style>
 </head>
 
 <body>
 
-<h2>Website Layout Designs</h2>
+<header class="box">Page Header</header>
+<nav class="box">Nav</nav>
 
 <div class="container">
 
-    <!-- Layout 1 -->
-    <div class="layout">
-        <div class="box">Logo</div>
-        <div class="box">Navigation</div>
-        <div class="flex">
-            <div class="col" style="width:30%;">
-                <div class="box">Sidebar</div>
-            </div>
-            <div class="col" style="width:70%;">
-                <div class="box">Header / Banner</div>
-                <div class="box" style="height:120px;">Body Area</div>
-            </div>
-        </div>
-        <div class="box">Footer</div>
-    </div>
+    <article class="box article">
+        <header class="box small">Article Header</header>
+        <main class="box main">Main</main>
+    </article>
 
-    <!-- Layout 2 -->
-    <div class="layout">
-        <div class="box">Logo</div>
-        <div class="box">Navigation</div>
-        <div class="box">Header / Banner</div>
-        <div class="flex">
-            <div class="box" style="flex:1;">Box 1</div>
-            <div class="box" style="flex:1;">Box 2</div>
-            <div class="box" style="flex:1;">Box 3</div>
-        </div>
-        <div class="flex">
-            <div class="box" style="flex:1;">Box 4</div>
-            <div class="box" style="flex:1;">Box 5</div>
-            <div class="box" style="flex:1;">Box 6</div>
-        </div>
-        <div class="box">Footer</div>
-    </div>
-
-    <!-- Layout 3 -->
-    <div class="layout">
-        <div class="box">Logo</div>
-        <div class="flex">
-            <div class="box" style="width:25%;">Sidebar</div>
-            <div class="col" style="width:75%;">
-                <div class="box">Header / Banner</div>
-                <div class="box" style="height:120px;">Body Area</div>
-            </div>
-        </div>
-        <div class="box">Footer</div>
-    </div>
-
-    <!-- Layout 4 -->
-    <div class="layout">
-        <div class="box">Logo</div>
-        <div class="box">Navigation</div>
-        <div class="grid3">
-            <div class="box">Box 1</div>
-            <div class="box">Box 2</div>
-            <div class="box">Box 3</div>
-            <div class="box">Box 4</div>
-            <div class="box">Box 5</div>
-            <div class="box">Box 6</div>
-            <div class="box">Box 7</div>
-            <div class="box">Box 8</div>
-            <div class="box">Box 9</div>
-        </div>
-        <div class="box">Footer</div>
-    </div>
+    <aside class="box aside a1">Aside</aside>
+    <aside class="box aside a2">Aside</aside>
+    <aside class="box aside a3">Aside</aside>
 
 </div>
+
+<section class="box">Section</section>
+<footer class="box">Footer</footer>
+
 </body>
 </html>

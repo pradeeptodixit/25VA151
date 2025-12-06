@@ -1,108 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Layout</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Faculty Timetable</title>
 <style>
-body {
-    margin: 0;
-    background: #2d8642;
-    font-family: Arial, sans-serif;
-}
-
-.box {
-    background: #b6e4a8;
-    padding: 15px;
-    margin: 10px;
-    font-size: 18px;
-}
-
-/* ---------- GRID AREA DEFINITIONS ---------- */
-.container {
-    display: grid;
-    gap: 10px;
-}
-
-/* ---------- MOBILE LAYOUT (left image) ---------- */
-@media (max-width: 700px) {
-    .container {
-        grid-template-areas:
-            "article"
-            "a1"
-            "a2"
-            "a3";
+    body {
+        font-family: Calibri, Arial, sans-serif;
     }
 
-    .article { grid-area: article; }
-    .a1 { grid-area: a1; }
-    .a2 { grid-area: a2; }
-    .a3 { grid-area: a3; }
-}
-
-/* ---------- TABLET LAYOUT (middle image) ---------- */
-@media (min-width: 701px) and (max-width: 1100px) {
-    .container {
-        grid-template-columns: 2fr 1fr;
-        grid-template-areas:
-            "article a1"
-            "article a2"
-            "a3 a3";
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
     }
 
-    .article { grid-area: article; }
-    .a1 { grid-area: a1; }
-    .a2 { grid-area: a2; }
-    .a3 { grid-area: a3; }
-}
-
-/* ---------- DESKTOP LAYOUT (right image) ---------- */
-@media (min-width: 1101px) {
-    .container {
-        grid-template-columns: 2fr 1fr 1fr;
-        grid-template-areas:
-            "article a1 a2"
-            "article a3 a3";
+    td, th {
+        border: 1px solid black;
+        padding: 5px;
     }
 
-    .article { grid-area: article; }
-    .a1 { grid-area: a1; }
-    .a2 { grid-area: a2; }
-    .a3 { grid-area: a3; }
-}
+    .header {
+        font-weight: bold;
+        text-align: left;
+        border: none;
+        padding: 6px 0;
+        font-size: 16px;
+    }
 
-/* Styles inside article */
-.article .small {
-    margin-top: 0;
-}
+    /* Colored Blocks */
+    .cse23        { background: #e6a8a8; }   /* Light Red */
+    .cse18        { background: #73648a; color:white; } /* Purple */
+    .aiml3        { background: #c9d9f0; }   /* Light Blue */
+    .cse15        { background: yellow; }    /* Yellow */
+    .cseds2       { background: #d9e6c3; }   /* Greenish */
 
-.main {
-    margin-top: 10px;
-}
+    /* Bold subject text */
+    .block {
+        font-weight: bold;
+        font-size: 17px;
+    }
 </style>
 </head>
 
 <body>
 
-<header class="box">Page Header</header>
-<nav class="box">Nav</nav>
+<div class="header">Name of the Faculty: Mr. Sanjeev Soni (SSI)</div>
+<div class="header">Department:</div>
+<div class="header">Course/Branch/Semester/Section: B.Tech / I Sem / CSE-15, CSE-18, CSE-23, CSEDS-2, AIML-3</div>
 
-<div class="container">
+<br>
 
-    <article class="box article">
-        <header class="box small">Article Header</header>
-        <main class="box main">Main</main>
-    </article>
+<table>
+    <tr>
+        <th rowspan="2">DAY <br> ↓<br><br> TIME <br> →</th>
+        <th>08:50-09:40</th>
+        <th>09:40-10:30</th>
+        <th>10:40-11:30</th>
+        <th>11:30-12:20</th>
+        <th>12:20-01:10</th>
+        <th>01:10-02:00</th>
+        <th>02:00-02:50</th>
+        <th>02:50-03:40</th>
+        <th>03:40-04:30</th>
+    </tr>
 
-    <aside class="box aside a1">Aside</aside>
-    <aside class="box aside a2">Aside</aside>
-    <aside class="box aside a3">Aside</aside>
+    <!-- MONDAY -->
+    <tr>
+        <td colspan="9"></td>
+    </tr>
 
-</div>
+    <!-- TUESDAY -->
+    <tr>
+        <th>TUESDAY</th>
+        <td colspan="3" class="cse23 block">
+            LT-BH-309 <br> 25VA151 <br> CSE23
+        </td>
+        <td colspan="3"></td>
+        <td colspan="2" class="cse15 block">
+            LT-RJ301 <br> 25VA151 <br> CSE15
+        </td>
+    </tr>
 
-<section class="box">Section</section>
-<footer class="box">Footer</footer>
+    <!-- WEDNESDAY -->
+    <tr>
+        <th>WEDNESDAY</th>
+        <td colspan="9"></td>
+    </tr>
 
+    <!-- THURSDAY -->
+    <tr>
+        <th>THURSDAY</th>
+        <td colspan="3" class="cseds2 block">
+            LT-RJ307 <br> 25VA151 <br> CSEDS2
+        </td>
+        <td colspan="2"></td>
+        <td class="cse15 block">
+            LT-RJ303 <br> 25VA151 <br> CSE15
+        </td>
+        <td colspan="3" class="cse18 block">
+            LT-BH-309 <br> 25VA151 <br> CSE18
+        </td>
+    </tr>
+
+    <!-- FRIDAY -->
+    <tr>
+        <th>FRIDAY</th>
+        <td colspan="2"></td>
+
+        <td colspan="2" class="aiml3 block">
+            LT-RJ-203 <br> 25VA151 <br> AIML3
+        </td>
+
+        <td colspan="2" class="cse23 block">
+            LT-RJ-101 <br> 25VA151 <br> CSE23
+        </td>
+
+        <td colspan="3" class="cseds2 block">
+            LT-RJ307 <br> 25VA151 <br> CSEDS2
+        </td>
+    </tr>
+
+    <!-- MONDAY Row end (for rightmost AIML slot) -->
+    <tr>
+        <th>MONDAY</th>
+        <td colspan="7"></td>
+        <td colspan="2" class="aiml3 block">
+            LT-RJ-202 <br> 25VA151 <br> AIML3
+        </td>
+    </tr>
+
+</table>
 </body>
 </html>

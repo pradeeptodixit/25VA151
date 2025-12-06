@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Layout Design</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f0f0f0;
+    }
+
+    .container {
+        width: 350px;
+        margin: 30px auto;
+        border: 3px solid teal;
+        padding: 5px;
+        background: white;
+    }
+
+    header, nav, section, aside, article, footer {
+        border: 2px solid black;
+        padding: 20px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    header { background: #ffb08a; }
+    nav { background: #7fa7ff; }
+    section { background: #b7ffa9; }
+    aside { background: #ffc48a; }
+    article { background: #6ee6ff; }
+    footer { background: #7fa7ff; }
+
+    /* Layout arrangement (Section + Aside, Article full width) */
+    .middle {
+        display: flex;
+        gap: 8px;
+    }
+
+    .middle-left {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .middle-right {
+        flex: 1;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>&lt;header&gt;</header>
+
+    <nav>&lt;nav&gt;</nav>
+
+    <div class="middle">
+
+        <div class="middle-left">
+            <section>&lt;section&gt;</section>
+            <article>&lt;article&gt;</article>
+        </div>
+
+        <aside class="middle-right">&lt;aside&gt;</aside>
+
+    </div>
+
+    <footer>&lt;footer&gt;</footer>
+
+</div>
+</body>
+</html>

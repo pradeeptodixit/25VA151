@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+body {
+    margin: 0;
+    background: #2d8642;
+    font-family: Arial, sans-serif;
+}
+
+.box {
+    background: #b6e4a8;
+    padding: 15px;
+    margin: 10px;
+    font-size: 18px;
+}
+
+/* ---------- GRID AREA DEFINITIONS ---------- */
+.container {
+    display: grid;
+    gap: 10px;
+}
+
+/* ---------- MOBILE LAYOUT (left image) ---------- */
+@media (max-width: 700px) {
+    .container {
+        grid-template-areas:
+            "article"
+            "a1"
+            "a2"
+            "a3";
+    }
+
+    .article { grid-area: article; }
+    .a1 { grid-area: a1; }
+    .a2 { grid-area: a2; }
+    .a3 { grid-area: a3; }
+}
+
+/* ---------- TABLET LAYOUT (middle image) ---------- */
+@media (min-width: 701px) and (max-width: 1100px) {
+    .container {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "article a1"
+            "article a2"
+            "a3 a3";
+    }
+
+    .article { grid-area: article; }
+    .a1 { grid-area: a1; }
+    .a2 { grid-area: a2; }
+    .a3 { grid-area: a3; }
+}
+
+/* ---------- DESKTOP LAYOUT (right image) ---------- */
+@media (min-width: 1101px) {
+    .container {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-areas:
+            "article a1 a2"
+            "article a3 a3";
+    }
+
+    .article { grid-area: article; }
+    .a1 { grid-area: a1; }
+    .a2 { grid-area: a2; }
+    .a3 { grid-area: a3; }
+}
+
+/* Styles inside article */
+.article .small {
+    margin-top: 0;
+}
+
+.main {
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="box">Page Header</header>
+<nav class="box">Nav</nav>
+
+<div class="container">
+
+    <article class="box article">
+        <header class="box small">Article Header</header>
+        <main class="box main">Main</main>
+    </article>
+
+    <aside class="box aside a1">Aside</aside>
+    <aside class="box aside a2">Aside</aside>
+    <aside class="box aside a3">Aside</aside>
+
+</div>
+
+<section class="box">Section</section>
+<footer class="box">Footer</footer>
+
+</body>
+</html>

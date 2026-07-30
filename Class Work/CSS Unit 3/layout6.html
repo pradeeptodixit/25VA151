@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Layout</title>
+<style>
+    .container {
+        width: 500px;
+        height: 250px;
+        border: 3px solid black;
+        display: flex;
+    }
+
+    .left-box {
+        width: 40%;
+        background-color: #e9d4c5;
+        border-right: 3px solid black;
+    }
+
+    .right-box {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-box, .bottom-box {
+        flex: 1;
+        background-color: #e3c1a7;
+        border-bottom: 3px solid black;
+    }
+
+    .bottom-box {
+        border-bottom: none;
+    }
+
+    .blue-divider {
+        width: 100%;
+        height: 8px;
+        background: #4aa3ff;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left-box"></div>
+
+    <div class="right-box">
+        <div class="top-box"></div>
+        <div class="blue-divider"></div>
+        <div class="bottom-box"></div>
+    </div>
+
+</div>
+</body>
+</html>

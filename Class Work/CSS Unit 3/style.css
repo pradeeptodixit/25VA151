@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+    background-image: url(img3.png);
+    background-position: top right;
+    background-repeat: repeat-x;
+    /* background: url('website-background.jpg') no-repeat top right #2f2f2f; */
+    background-size: cover;
+    color: aliceblue;
+}
+
+p{
+    font-family: arial;
+    font-size: 30px;
+    color: #f04;
+    font-weight: 700;
+    font-style: italic;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 10px #fff;
+    /* text-wrap: initial; */
+    /* text-overflow: ; */
+    clear: both;
+}
+
+#para{
+    color: aliceblue;
+    display: inline-block;
+}
+
+img{
+    float: left;
+}

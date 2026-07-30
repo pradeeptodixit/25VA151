@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Faculty Timetable</title>
+<style>
+    body {
+        font-family: Calibri, Arial, sans-serif;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    td, th {
+        border: 1px solid black;
+        padding: 5px;
+    }
+
+    .header {
+        font-weight: bold;
+        text-align: left;
+        border: none;
+        padding: 6px 0;
+        font-size: 16px;
+    }
+
+    /* Colored Blocks */
+    .cse23        { background: #e6a8a8; }   /* Light Red */
+    .cse18        { background: #73648a; color:white; } /* Purple */
+    .aiml3        { background: #c9d9f0; }   /* Light Blue */
+    .cse15        { background: yellow; }    /* Yellow */
+    .cseds2       { background: #d9e6c3; }   /* Greenish */
+
+    /* Bold subject text */
+    .block {
+        font-weight: bold;
+        font-size: 17px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="header">Name of the Faculty: Mr. Sanjeev Soni (SSI)</div>
+<div class="header">Department:</div>
+<div class="header">Course/Branch/Semester/Section: B.Tech / I Sem / CSE-15, CSE-18, CSE-23, CSEDS-2, AIML-3</div>
+
+<br>
+
+<table>
+    <tr>
+        <th rowspan="2">DAY <br> ↓<br><br> TIME <br> →</th>
+        <th>08:50-09:40</th>
+        <th>09:40-10:30</th>
+        <th>10:40-11:30</th>
+        <th>11:30-12:20</th>
+        <th>12:20-01:10</th>
+        <th>01:10-02:00</th>
+        <th>02:00-02:50</th>
+        <th>02:50-03:40</th>
+        <th>03:40-04:30</th>
+    </tr>
+
+    <!-- MONDAY -->
+    <tr>
+        <td colspan="9"></td>
+    </tr>
+
+    <!-- TUESDAY -->
+    <tr>
+        <th>TUESDAY</th>
+        <td colspan="3" class="cse23 block">
+            LT-BH-309 <br> 25VA151 <br> CSE23
+        </td>
+        <td colspan="3"></td>
+        <td colspan="2" class="cse15 block">
+            LT-RJ301 <br> 25VA151 <br> CSE15
+        </td>
+    </tr>
+
+    <!-- WEDNESDAY -->
+    <tr>
+        <th>WEDNESDAY</th>
+        <td colspan="9"></td>
+    </tr>
+
+    <!-- THURSDAY -->
+    <tr>
+        <th>THURSDAY</th>
+        <td colspan="3" class="cseds2 block">
+            LT-RJ307 <br> 25VA151 <br> CSEDS2
+        </td>
+        <td colspan="2"></td>
+        <td class="cse15 block">
+            LT-RJ303 <br> 25VA151 <br> CSE15
+        </td>
+        <td colspan="3" class="cse18 block">
+            LT-BH-309 <br> 25VA151 <br> CSE18
+        </td>
+    </tr>
+
+    <!-- FRIDAY -->
+    <tr>
+        <th>FRIDAY</th>
+        <td colspan="2"></td>
+
+        <td colspan="2" class="aiml3 block">
+            LT-RJ-203 <br> 25VA151 <br> AIML3
+        </td>
+
+        <td colspan="2" class="cse23 block">
+            LT-RJ-101 <br> 25VA151 <br> CSE23
+        </td>
+
+        <td colspan="3" class="cseds2 block">
+            LT-RJ307 <br> 25VA151 <br> CSEDS2
+        </td>
+    </tr>
+
+    <!-- MONDAY Row end (for rightmost AIML slot) -->
+    <tr>
+        <th>MONDAY</th>
+        <td colspan="7"></td>
+        <td colspan="2" class="aiml3 block">
+            LT-RJ-202 <br> 25VA151 <br> AIML3
+        </td>
+    </tr>
+
+</table>
+</body>
+</html>

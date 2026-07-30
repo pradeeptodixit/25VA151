@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Layout</title>
+<style>
+    body{
+        margin:0;
+        font-family:Arial, sans-serif;
+    }
+
+    .box{
+        border:3px solid black;
+        padding:40px;
+        text-align:center;
+        box-sizing:border-box;
+        font-weight:bold;
+    }
+
+    #header{ background:#4aa3ff; }
+    #nav-global{ background:#1e90ff; }
+    #page-title{ background:#ff8c8c; }
+
+    .container{
+        display:flex;
+        flex-wrap:wrap;
+        width:100%;
+    }
+
+    #content1{ background:#ffcc99; flex:3; }
+    #nav-local{ background:#fff8a6; flex:1; }
+
+    #content2, #content3{
+        background:#ffcc99;
+        flex:1;
+        min-width:250px;
+    }
+
+    #sidebar{
+        background:#fff8a6;
+        flex:1;
+        min-width:250px;
+    }
+
+    #footer{ background:#d3d3d3; }
+
+    /* Layout rows */
+    .row{
+        width:100%;
+        display:flex;
+    }
+
+    #right{
+        width: 1018px
+    }
+</style>
+</head>
+
+<body>
+<div id="header" class="box">#Header</div>
+<div id="nav-global" class="box">#Nav Global</div>
+
+<div class="row">
+    <div id="right">
+        <div id="page-title" class="box" style="flex:3;">#Page Title</div>
+        <div id="content1" class="box">#Content 1</div>
+    </div>
+    <div id="nav-local" class="box" style="flex:1;">#Nav Local</div>
+</div>
+
+<div class="row">
+    <div id="content2" class="box">#Content 2</div>
+    <div id="content3" class="box">#Content 3</div>
+    <div id="sidebar" class="box">#Sidebar</div>
+</div>
+
+<div id="footer" class="box">#Footer</div>
+</body>
+</html>

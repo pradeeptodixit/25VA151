@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        /* body{
+            color: aqua;
+        } */
+        
+        /* .box{
+        color: brown;
+        } */
+
+        div p{
+        color: #999;
+        }
+
+        /* .box > p{
+            background-color: blue;
+        } */
+
+        /* div ~ p{
+            color: blueviolet;
+        } */
+
+        a:hover{
+            color: brown;
+            font-size: 20px;
+        }
+
+        a:active{
+            color: bisque;
+        }
+
+        /* a:visited{
+            color: aqua;
+        } */
+
+        a:link{
+            text-decoration: none; font-size: larger;
+        }
+
+        ul{
+            list-style; none; display: flex;
+        }
+
+        ul li{
+            margin: 20 px; border-right: 1px solid #999;
+            padding-right: 20px;
+        }
+
+        ul li-hover{
+            color: blue;
+        }
+
+        ul li:nth-chid(5){
+            border-right: 0px;
+        }
+
+        .para{
+            color: blue;
+        }
+
+        .para::first-letter{
+            color: brown; font-size: large;
+        }
+
+        .para::first-line{
+            background-color: aqua;
+        }
+
+        .para::after{
+            content: "Read More";
+            color: #f04;
+            font-size: 20px;
+        }
+
+        .para::before{
+            content: "Read More";
+            color: #f04;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--CSS Selectors-->
+
+    <div class="box">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem maxime sapiente iste ducimus laudantium, labore quia natus repudiandae veniam eos! Quidem soluta rem numquam earum perspiciatis quae tempore animi?
+        </p>
+    </div>
+
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, totam animi? Rem tenetur placeat non ipsa quos aspernatur porro exercitationem laborum aut ea atque, deleniti necessitatibus provident, nemo aperiam maxime.
+        </p>
+
+        <div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus vero explicabo quas aspernatur quos eaque. A ut, quasi minus voluptatibus dicta officiis numquam aut culpa eos expedita illo quod. Facere.
+            </p>
+        </div>
+    </div>
+
+    <!--CSS Pseudo-classes: style for a special state of an element-->
+
+    <a href="">Visit this link</a>
+
+    <ul>
+        <li>home</li>
+        <li>services</li>
+        <li>about</li>
+        <li>gallery</li>
+        <li>contact</li>
+    </ul>
+
+    <!--CSS Pseudo-Elements: style a specific part of a paragraph-->
+
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate, perferendis cum, hic, dignissimos velit repudiandae voluptatibus eum enim ullam blanditiis dicta deserunt dolorum molestiae omnis libero sint est laudantium minima!
+    </p>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colored Timetable</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+    th {
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+<table border="5px">
+  <tr>
+    <th colspan="4">Name of the Faculty: Mr. Sanjeev Soni</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>L</th>
+    <th>T</th>
+    <th>P</th>
+    <th>Total</th>
+  </tr>
+  
+  <tr>
+    <td colspan="4" style="background-color:white;">Department:</td>
+    <td style="background-color:white;"></td>
+    <td style="background-color:white;"></td>
+    <td style="background-color:white;">5</td>
+    <td style="background-color:white;"></td>
+    <td style="background-color:white;">10</td>
+    <td style="background-color:white;">15</td>
+  </tr>
+
+  <tr>
+    <td colspan="10" style="background-color:white;">Course/Branch/Semester/Section: B.Tech / I Sem / CSE-23</td>
+  </tr>
+
+  <tr>
+    <td style="background-color:white;">TIME <br> DATE</td>
+    <td style="background-color:white;">08:50-09:40</td>
+    <td style="background-color:white;">09:40-10:30</td>
+    <td style="background-color:white;">10:40-11:30</td>
+    <td style="background-color:white;">11:30-12:20</td>
+    <td style="background-color:white;">12:20-01:10</td>
+    <td style="background-color:white;">01:10-02:00</td>
+    <td style="background-color:white;">02:00-02:50</td>
+    <td style="background-color:white;">02:50-03:40</td>
+    <td style="background-color:white;">03:40-04:30</td>
+  </tr>
+
+  <!-- MONDAY -->
+  <tr>
+    <td style="background-color:white;">MONDAY</td>
+    <td colspan="2" style="background-color:#ff9999;">25CS151<br>(SHV)<br>RJ-101</td>
+    <td style="background-color:rgb(55, 55, 239);">25EC101<br>(MSX)<br>RJ-101</td>
+    <td style="background-color:rgb(230, 166, 46);">25AS102<br>(SCH)<br>RJ-101</td>
+    <td style="background-color:lightgreen;">25HU101<br>(SGI)<br>RJ-101</td>
+    <td style="background-color:white">Lunch</td>
+    <td style="background-color:#a3c2c2;">25ME101<br>(HS)<br>RJ-101</td>
+    <td style="background-color:#ffe680;">25AS102<br>(SCH)<br>RJ-101</td>
+    <td style="background-color:#d1c4e9;">mentor-mentee<br>(HS,SHV)<br>RJ-101</td>
+  </tr>
+
+  <!-- TUESDAY -->
+  <tr>
+    <td style="background-color:white;">TUESDAY</td>
+    <td colspan="2" style="background-color:#a3e4d7;">25EC151<br>(MSX,KB)<br>Bhabha Block I Floor (BH-115)</td>
+    <td style="background-color:#ff9999;">25CS101<br>(SHV)<br>RJ-101</td>
+    <td style="background-color:#ff9999;">25CS101<br>(SHV)<br>RJ-101</td>
+    <td style="background-color:#ffb3e6;">25HU102<br>(VM)<br>RJ-101</td>
+    <td style="background-color:white;">Lunch</td>
+    <td style="background-color:#a3c2c2;">25ME101<br>(HS)<br>RJ-101</td>
+    <td style="background-color:#ffff99;">25AS102<br>(SCH)<br>RJ-101</td>
+    <td style="background-color:#99ff99;">25EC101<br>(MSX)<br>RJ-101</td>
+  </tr>
+
+  <!-- WEDNESDAY -->
+  <tr>
+    <td style="background-color:white;">WEDNESDAY</td>
+    <td style="background-color:#99ff99;">25EC101<br>(MSX)<br>RJ-101</td>
+    <td style="background-color:#ffff99;">25AS102<br>(SCH)<br>RJ-101</td>
+    <td style="background-color:#a3c2c2;">25ME101<br>(HS)<br>RJ-101</td>
+    <td style="background-color:#d9b3ff;">25VA151<br>(DDH)<br>RJ-101</td>
+    <td style="background-color:#ffb3e6;">25HU102<br>(VM)<br>RJ-101</td>
+    <td style="background-color:white;">Lunch</td>
+    <td colspan="2" style="background-color:#a3c2c2;">25ME151<br>(MK,ASX)<br>Vishwakarma Block Ground Floor</td>
+    <td style="background-color:#f0f8ff;">&nbsp;</td>
+  </tr>
+
+  <!-- THURSDAY -->
+  <tr>
+    <td style="background-color:white;">THURSDAY</td>
+    <td style="background-color:#ffff99;">25AS102<br>(SCH)<br>RJ-101</td>
+    <td style="background-color:#a3c2c2;">25ME101<br>(HS)<br>RJ-101</td>
+    <td style="background-color:#ffb3e6;">25HU101<br>(SGI)<br>RJ-101</td>
+    <td style="background-color:#99ff99;">25EC101<br>(MSX)<br>RJ-101</td>
+    <td style="background-color:#ffb3e6;">25HU102<br>(VM)<br>RJ-101</td>
+    <td style="background-color:white;">Lunch</td>
+    <td style="background-color:#ffff99;">25AS102<br>(SCH)<br>RJ-101</td>
+    <td colspan="2" style="background-color:#d9b3ff;">25VA151<br>(DDH)<br>RJ-101</td>
+  </tr>
+
+  <!-- FRIDAY -->
+  <tr>
+    <td style="background-color:white;">FRIDAY</td>
+    <td style="background-color:#ffff99;">25AS102<br>(SCH)<br>RJ-101</td>
+    <td style="background-color:#ffb3e6;">25HU101<br>(SGI)<br>RJ-101</td>
+    <td style="background-color:#a3c2c2;">25ME101<br>(HS)<br>RJ-101</td>
+    <td colspan="2" style="background-color:#f7d794;">25HU151<br>(SGI,SSG)<br>KC Block V Floor (KC-510)</td>
+    <td style="background-color:white;">Lunch</td>
+    <td style="background-color:#ff9999;">25CS101<br>(SHV)<br>RJ-101</td>
+    <td style="background-color:#ff9999;">25CS101<br>(SHV)<br>RJ-101</td>
+    <td style="background-color:#99ff99;">25EC101<br>(MSX)<br>RJ-101</td>
+  </tr>
+
+</table>
+</body>
+</html>
